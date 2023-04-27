@@ -41,7 +41,7 @@ def play(n):
     if gamefield[n] == 0:
         btn[n].config(text=' ', bg='#ccb')
     elif gamefield[n] == -1:
-        btn[n].config(text='\u2620')
+        btn[n].config(text='\u2661')
         if new_move <= (256 - 40):
             tk.title('Игра окончена.')
             new_move = 256
@@ -53,7 +53,7 @@ def play(n):
 def one_by_one(a):
     for i in range(a, 256):
         if gamefield[i] == -1 and btn[i].cget('text') == ' ':
-            btn[i].config(text='\u2620')
+            btn[i].config(text='\u2661')
             btn[i].flash()
             tk.bell()
             tk.after(50, one_by_one, i + 1)
