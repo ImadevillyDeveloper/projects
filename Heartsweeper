@@ -55,7 +55,6 @@ def one_by_one(a):
         if gamefield[i] == -1 and btn[i].cget('text') == ' ':
             btn[i].config(text='\u2661')
             btn[i].flash()
-            tk.bell()
             tk.after(50, one_by_one, i + 1)
             break
 
